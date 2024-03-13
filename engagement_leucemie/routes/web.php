@@ -19,6 +19,7 @@ Route::get('/', function () {
 
 Route::get('/template', function () {
     return view('template');
+});
 
 Route::get('/contact', 'ContactController@showForm')->name('contact.form');
 Route::post('/contact', 'ContactController@submitForm')->name('contact.submit');
