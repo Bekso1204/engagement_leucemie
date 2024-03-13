@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+<<<<<<< HEAD
 
 Route::get('/donquoi', function () {
     return view('donquoi');
@@ -24,3 +25,8 @@ Route::get('/donquoi', function () {
 Route::get('/limiteage', function () {
     return view('limiteage');
 });
+=======
+Route::get('/template', function () {
+    return view('template');
+});
+>>>>>>> eef6f303cddc1ba2022dd67a2edae7f6945e5fe5
