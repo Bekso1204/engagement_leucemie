@@ -35,23 +35,33 @@
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
+                <a class="nav-link active" aria-current="page" href="#">Accueil</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown link
+                  Don de moelle osseuse
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li><a class="dropdown-item" href="#">Qu'est ce que c'est ?</a></li>
+                  <li><a class="dropdown-item" href="#">Pourquoi 18-35 ans ?</a></li>
+                  <li><a class="dropdown-item" href="#">Témoignages</a></li>
                 </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Association
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Présentation</a></li>
+                  <li><a class="dropdown-item" href="#">Partenaires</a></li>
+                  <li><a class="dropdown-item" href="#">Adhérer</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Actualités</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
               </li>
             </ul>
           </div>
@@ -77,15 +87,14 @@
           <div class="col-12 col-md-4 col-lg-3 col-xl-2 coordonnees">
             <div class="widget">
               <h4 class="widget-title mb-4">Coordonnées</h4>
-              <address class="mb-4"><i class="fa-solid fa-location-dot"></i>    56 Chemin des Montarmots, 25000 BESANCON</address>
+              <address class="mb-4"><i class="fa-solid fa-location-dot"></i>      56 Chemin des Montarmots, 25000 BESANCON</address>
               <p class="mb-0">
-                <i class="fa-solid fa-envelope"></i>engagementleucemie@gmail.com
+                <i class="fa-solid fa-envelope"></i>      engagementleucemie@gmail.com
               </p>
             </div>
           </div>
           <div class="col-12 col-md-4 col-lg-3 col-xl-2 reseaux">
             <div class="widget">
-              <h4 class="widget-title mb-4">Réseaux sociaux</h4>
               <ul class="list-unstyled">
                 <li class="mb-2">
                   <a target="_blank" href="https://twitter.com/FLeucemie"><i class="fa-brands fa-x-twitter"></i></a>
