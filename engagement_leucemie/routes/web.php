@@ -16,3 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/contact', 'ContactController@showForm')->name('contact.form');
+Route::post('/contact', 'ContactController@submitForm')->name('contact.submit');
+
+Route::get('/presentation', 'PresentationController@show')->name('presentation.show');
