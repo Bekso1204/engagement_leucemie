@@ -89,3 +89,125 @@
 .footer li {
     margin: 10px;
 }
+
+/*********** DON QUOI ***********/
+.page-donquoi{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.liens-externes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cases_donquoi1{
+
+
+        box-sizing: border-box;
+
+        width: 1000px;
+
+        height: 400px;
+
+        background-color: rgb(248, 253, 255);
+
+        padding: 20px;
+
+        border: 5px solid rgb(201, 233, 195);
+
+        margin: 10px;
+
+        border-radius: 1%;
+        display: flex;
+}
+
+.cases_donquoi2{
+
+
+    box-sizing: border-box;
+
+    width: 1000px;
+
+    height: 400px;
+
+    background-color: rgb(248, 253, 255);
+
+    padding: 20px;
+
+    border: 5px solid rgb(201, 233, 195);
+
+    margin: 10px;
+
+    border-radius: 1%;
+
+
+}
+
+.cases_donquoi3{
+
+
+    box-sizing: border-box;
+
+    width: 1000px;
+
+    height: 400px;
+
+    background-color: rgb(248, 253, 255);
+
+    padding: 20px;
+
+    border: 5px solid rgb(201, 233, 195);
+
+    margin: 10px;
+
+    border-radius: 1%;
+
+    display: flex;
+}
+
+.casesvideodonquoi{
+    box-sizing: border-box;
+
+    width: 900px;
+
+    height: 600px;
+
+
+
+    padding: 20px;
+
+
+
+    margin: 100px;
+}
+
+.casesvideodonquoi2{
+padding: 30px;
+height: 400px;
+}
+
+
+.cases_bordure_gauche_donquoi{
+    margin: 0 100px;
+}
+
+
+
+.droite{
+    float: right;
+
+    margin-right: 10px;
+}
+
+
+.gauche{
+    float: left;
+
+    margin-right: 10px;
+}
+/*********** DON QUOI ***********/
