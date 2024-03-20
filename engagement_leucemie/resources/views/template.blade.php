@@ -35,33 +35,33 @@
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+                <a class="nav-link active" aria-current="page" href="">Accueil</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Don de moelle osseuse
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Qu'est ce que c'est ?</a></li>
-                  <li><a class="dropdown-item" href="#">Pourquoi 18-35 ans ?</a></li>
-                  <li><a class="dropdown-item" href="#">Témoignages</a></li>
+                  <li><a class="dropdown-item" href="">Qu'est ce que c'est ?</a></li>
+                  <li><a class="dropdown-item" href="">Pourquoi 18-35 ans ?</a></li>
+                  <li><a class="dropdown-item" href="{{route('temoignages')}}">Témoignages</a></li>
                 </ul>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Association
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Présentation</a></li>
-                  <li><a class="dropdown-item" href="#">Partenaires</a></li>
-                  <li><a class="dropdown-item" href="#">Adhérer</a></li>
+                  <li><a class="dropdown-item" href="">Présentation</a></li>
+                  <li><a class="dropdown-item" href="{{route('partenaires')}}">Partenaires</a></li>
+                  <li><a class="dropdown-item" href="">Adhérer</a></li>
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Actualités</a>
+                <a class="nav-link" href="">Actualités</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link" href="">Contact</a>
               </li>
             </ul>
           </div>
