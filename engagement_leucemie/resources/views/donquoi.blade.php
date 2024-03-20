@@ -20,7 +20,7 @@
 <!-- Paragraphe 2 -->
     <p>
 
-        Pour soigner les maladies du sang, la greffe de moelle osseuse est l'un des traitements efficaces.80 % des greffes de moelle osseuse sont réalisées pour traiter certaines formes de cancer comme les leucémies, les lymphomes, les myélomes... Les personnes atteintes de maladie du sang (thalassémie, drépanocytose), d'anémie aplasique ou de troubles héréditaires du système immunitaire et du métabolisme peuvent également avoir besoin d'une greffe de moelle osseuse.
+        Pour soigner les maladies du sang, la greffe de moelle osseuse est l'un des traitements efficaces. 80 % des greffes de moelle osseuse sont réalisées pour traiter certaines formes de cancer comme les leucémies, les lymphomes, les myélomes... Les personnes atteintes de maladie du sang (thalassémie, drépanocytose), d'anémie aplasique ou de troubles héréditaires du système immunitaire et du métabolisme peuvent également avoir besoin d'une greffe de moelle osseuse.
     </p>
 <!-- Titre Qui peut donner -->
  <!-- Div titre 1 -->
@@ -114,28 +114,31 @@ Un suivi annuel, non obligatoire, est proposé aux donneurs.</p>
 </div>
 </div>
     <div> <!-- Div titre 2 --> </div>
+    <!-- Surement une case pour ranger les vidéos -->
+<div class="casesvideodonquoi">
 <!-- Titre Pour aller plus loin -->
 <h3>Pour aller plus loin</h3>
 
-<!-- Surement une case pour ranger les vidéos -->
-<div class="casesvideodonquoi">
+
 
 <!-- Emplacement Vidéo -->
-<iframe width="420" height="315"
+<div class="videos">
+<iframe
 src="https://www.youtube.com/embed/tgbNymZ7vqY">
 </iframe>
 <!-- Emplacement Vidéo -->
-<iframe width="420" height="315"
+<iframe
 src="https://www.youtube.com/embed/tgbNymZ7vqY">
 </iframe>
 <!-- Emplacement Vidéo -->
-<iframe width="420" height="315"
+<iframe
 src="https://www.youtube.com/embed/tgbNymZ7vqY">
 </iframe>
 <!-- Emplacement Vidéo -->
-<iframe width="420" height="315"
+<iframe
 src="https://www.youtube.com/embed/tgbNymZ7vqY">
 </iframe>
+</div>
 </div>
 <!-- Titre Encore Plus -->
 <div class="cases_bordure_gauche_donquoi">
