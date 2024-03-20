@@ -19,3 +19,9 @@ Route::get('/', function () {
 Route::get('/template', function () {
     return view('template');
 });
+Route::get('/partenaires', function () {
+    return view('partenaires');
+})->name('partenaires');
+Route::get('/temoignages', function () {
+    return view('temoignages');
+})->name('temoignages');
