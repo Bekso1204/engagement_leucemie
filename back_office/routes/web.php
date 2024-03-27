@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LienController;
 use App\Http\Controllers\PartenaireController;
 use App\Models\Partenaire;
 use Illuminate\Support\Facades\Route;
@@ -22,3 +23,6 @@ Route::get('/', function () {
 
 // Route pour les pages de gestion des partenaires
 Route::resource('/partenaire', PartenaireController::class);
+
+// Route pour les pages de gestion des liens des partenaires
+Route::resource('/lien', LienController::class);
