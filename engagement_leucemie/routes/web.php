@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\ContactController;
+use App\Http\PresentationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,7 +23,10 @@ Route::get('/template', function () {
     return view('template');
 });
 
-Route::get('/contact', 'ContactController@showForm')->name('contact.form');
-Route::post('/contact', 'ContactController@submitForm')->name('contact.submit');
+Route::get('/contact', function () {
+    return view('contact');
+})->name('contact.show');
 
-Route::get('/presentation', 'PresentationController@show')->name('presentation.show');
+Route::get('/presentation', function () {
+    return view('presentation');
+})->name('presentation.show');
