@@ -19,6 +19,8 @@
 
     <!-- Custom styles for this template-->
     <link href="{{ url('assets/css/sb-admin-2.min.css') }}" rel="stylesheet" />
+    <link href="{{ url('assets/css/temoignages.css') }}" rel="stylesheet" />
+    <script type="text/javascript" src="{{ asset('js/script.js') }}"></script>
 
 </head>
 
@@ -65,7 +67,7 @@
             </li>
             <hr class="sidebar-divider my-0">
             <li class="nav-item">
-                <a class="nav-link" href="">
+                <a class="nav-link" href="{{ route('temoignage.index') }}">
                     <i class="fas fa-fw fa-folder"></i>
                     <span>Les Témoignages</span></a>
             </li>
@@ -237,6 +239,8 @@
     <!-- Page level custom scripts -->
     <script src="{{ url('assets/js/demo/chart-area-demo.js')}}"></script>
     <script src="{{ url('assets/js/demo/chart-pie-demo.js')}}"></script>
+
+    <script type="text/javascript" src="{{ asset('js/script.js') }}"></script>
 
 </body>
 

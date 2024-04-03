@@ -2,6 +2,9 @@
 
 use App\Http\Controllers\LienController;
 use App\Http\Controllers\PartenaireController;
+use App\Http\Controllers\TemoignageController;
+use App\Models\Partenaire;
+use App\Models\Temoignage;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -33,12 +36,15 @@ Route::middleware('auth')->group(function () {
     Route::get('/template', function () {
         return view('template');
     });
-    
+
     // Route pour les pages de gestion des partenaires
     Route::resource('/partenaire', PartenaireController::class);
-    
+
     // Route pour les pages de gestion des liens des partenaires
     Route::resource('/lien', LienController::class);
+
+    // Route pour les pages de gestion des temoignages
+    Route::resource('/temoignage', TemoignageController::class);
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
