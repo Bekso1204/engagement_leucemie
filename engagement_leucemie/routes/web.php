@@ -4,6 +4,8 @@ use App\Http\Controllers\TemoignageController;
 use App\Models\Lien;
 use App\Models\Partenaire;
 use Illuminate\Support\Facades\Route;
+use App\Http\ContactController;
+use App\Http\PresentationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +26,10 @@ Route::get('/template', function () {
     return view('template');
 });
 
+Route::get('/contact', function () {
+    return view('contact');
+})->name('contact.show');
+
 Route::get('/partenaires', function () {
     $partenaires = Partenaire::all();
     $liens = Lien::all();
@@ -32,7 +38,7 @@ Route::get('/partenaires', function () {
 
 Route::get('temoignages', [TemoignageController::class, 'show'])->name('temoignages');
 
-Route::get('/contact', 'ContactController@showForm')->name('contact.form');
-Route::post('/contact', 'ContactController@submitForm')->name('contact.submit');
 
-Route::get('/presentation', 'PresentationController@show')->name('presentation.show');
+Route::get('/presentation', function () {
+    return view('presentation');
+})->name('presentation.show');
