@@ -8,6 +8,13 @@
   }
 }
 
+@each $color, $value in $colors {
+  .bg-#{$color} {
+    background-color: $value;
+    background-size: cover;
+  }
+}
+
 // Grayscale Background Utilities
 
 @each $level, $value in $grays {
