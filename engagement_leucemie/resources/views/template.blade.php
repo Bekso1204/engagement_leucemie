@@ -53,7 +53,7 @@
                   Association
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="">Présentation</a></li>
+                  <li><a class="dropdown-item" href="{{route('presentation.show')}}">Présentation</a></li>
                   <li><a class="dropdown-item" href="{{route('partenaires')}}">Partenaires</a></li>
                   <li><a class="dropdown-item" href="">Adhérer</a></li>
                 </ul>
@@ -62,7 +62,7 @@
                 <a class="nav-link" href="">Actualités</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="">Contact</a>
+                <a class="nav-link" href="{{route('contact.show')}}">Contact</a>
               </li>
             </ul>
           </div>

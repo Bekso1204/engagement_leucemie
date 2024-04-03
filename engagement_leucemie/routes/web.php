@@ -29,6 +29,7 @@ Route::get('/template', function () {
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact.show');
+
 Route::get('/partenaires', function () {
     $partenaires = Partenaire::all();
     $liens = Lien::all();
@@ -37,8 +38,6 @@ Route::get('/partenaires', function () {
 
 Route::get('temoignages', [TemoignageController::class, 'show'])->name('temoignages');
 
-Route::get('/contact', 'ContactController@showForm')->name('contact.form');
-Route::post('/contact', 'ContactController@submitForm')->name('contact.submit');
 
 Route::get('/presentation', function () {
     return view('presentation');
