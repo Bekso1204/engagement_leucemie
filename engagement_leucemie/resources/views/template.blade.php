@@ -8,6 +8,7 @@
     <script src="https://kit.fontawesome.com/db7501469c.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" integrity="sha512-HXXR0l2yMwHDrDyxJbrMD9eLvPe3z3qL3PPeozNTsiHJEENxx8DH2CxmV05iwG0dwoz5n4gQZQyYLUNt1Wdgfg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Engagement Leucémie</title>
 </head>
 <body>
@@ -35,33 +36,33 @@
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+                <a class="nav-link active" aria-current="page" href="">Accueil</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Don de moelle osseuse
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Qu'est ce que c'est ?</a></li>
-                  <li><a class="dropdown-item" href="#">Pourquoi 18-35 ans ?</a></li>
-                  <li><a class="dropdown-item" href="#">Témoignages</a></li>
+                  <li><a class="dropdown-item" href="">Qu'est ce que c'est ?</a></li>
+                  <li><a class="dropdown-item" href="">Pourquoi 18-35 ans ?</a></li>
+                  <li><a class="dropdown-item" href="{{route('temoignages')}}">Témoignages</a></li>
                 </ul>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Association
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Présentation</a></li>
-                  <li><a class="dropdown-item" href="#">Partenaires</a></li>
-                  <li><a class="dropdown-item" href="#">Adhérer</a></li>
+                  <li><a class="dropdown-item" href="{{route('presentation.show')}}">Présentation</a></li>
+                  <li><a class="dropdown-item" href="{{route('partenaires')}}">Partenaires</a></li>
+                  <li><a class="dropdown-item" href="">Adhérer</a></li>
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Actualités</a>
+                <a class="nav-link" href="">Actualités</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link" href="{{route('contact.show')}}">Contact</a>
               </li>
             </ul>
           </div>

@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\TemoignageController;
+use App\Models\Lien;
+use App\Models\Partenaire;
 use Illuminate\Support\Facades\Route;
 use App\Http\ContactController;
 use App\Http\PresentationController;
@@ -26,6 +29,15 @@ Route::get('/template', function () {
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact.show');
+
+Route::get('/partenaires', function () {
+    $partenaires = Partenaire::all();
+    $liens = Lien::all();
+    return view('partenaires', compact('partenaires', 'liens'));
+})->name('partenaires');
+
+Route::get('temoignages', [TemoignageController::class, 'show'])->name('temoignages');
+
 
 Route::get('/presentation', function () {
     return view('presentation');

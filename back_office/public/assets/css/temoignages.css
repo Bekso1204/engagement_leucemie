@@ -1,0 +1,25 @@
+.table td, .table th {
+    text-align: left;
+    vertical-align:middle;
+    height: 100%;
+}
+table img{
+    height: 100%;
+}
+.td-image{
+    display: flex;
+    justify-content: center;
+    width: 75px;
+    height: 75px;
+    overflow: hidden;
+    border-radius: 100%;
+}
+
+.actions{
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+}
+button{
+    margin: 15px 5px;
+}
