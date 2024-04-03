@@ -100,7 +100,7 @@
 
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
+                    @auth
                     <button onclick="goBack();" class="btn btn-primary ">Retour</button>
 
 
@@ -128,7 +128,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">
-                                    <?php /**{{ auth()->user()->first_name }} {{ auth()->user()->name }}**/ ?>
+                                    {{ auth()->user()->name }}
                                 </span>
                             </a>
                             <!-- Dropdown - User Information -->
@@ -141,7 +141,7 @@
                         </li>
 
                     </ul>
-
+                    @endauth
                 </nav>
                 <!-- End of Topbar -->
 
@@ -203,11 +203,11 @@
                 <div class="modal-body">Selectionner "Se Déconnecter" ci-dessous si vous etes prêt a mettre fin a votre
                     session.</div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <form id="logout-form" action="" method="POST">
-                        @csrf
-                        <button type=" submit" class="btn btn-primary" href="">Se
-                            Déconnecter</button>
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Annuler</button>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" >
+                    @csrf
+                    <button type=" submit" class="btn btn-primary" href="{{ route('logout') }} ">Se
+                        Déconnecter</button>
                     </form>
 
                 </div>
