@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TemoignageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,9 +25,8 @@ Route::get('/template', function () {
 Route::get('/partenaires', function () {
     return view('partenaires');
 })->name('partenaires');
-Route::get('/temoignages', function () {
-    return view('temoignages');
-})->name('temoignages');
+
+Route::get('temoignages', [TemoignageController::class, 'show'])->name('temoignages');
 
 Route::get('/contact', 'ContactController@showForm')->name('contact.form');
 Route::post('/contact', 'ContactController@submitForm')->name('contact.submit');
