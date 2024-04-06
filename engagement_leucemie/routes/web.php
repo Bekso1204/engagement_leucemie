@@ -6,6 +6,8 @@ use App\Models\Partenaire;
 use Illuminate\Support\Facades\Route;
 use App\Http\ContactController;
 use App\Http\PresentationController;
+use App\Models\Action;
+use App\Models\Temoignage;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,7 +40,16 @@ Route::get('/partenaires', function () {
 
 Route::get('temoignages', [TemoignageController::class, 'show'])->name('temoignages');
 
-
 Route::get('/presentation', function () {
     return view('presentation');
 })->name('presentation.show');
+
+Route::get('/actions', function () {
+    $actions = Action::orderBy('date', 'desc')->get();
+    return view('actions', compact('actions'));
+})->name('actions');
+
+Route::get('/action/{id}', function(string $id){
+    $action = Action::find($id);
+    return view('action', compact( 'action' ) );
+})->name('action');
