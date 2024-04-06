@@ -83,6 +83,9 @@ class LienController extends Controller
      */
     public function destroy(string $id)
     {
-        
+        $lien = Lien::find($id);
+        $lien->delete();
+
+        return redirect()->route('lien.index')->with('success', 'Lien supprimé');
     }
 }
