@@ -39,17 +39,23 @@ Route::get('/partenaires', function () {
 })->name('partenaires');
 
 Route::get('temoignages', [TemoignageController::class, 'show'])->name('temoignages');
+Route::get('temoignage/{id}', [TemoignageController::class, 'temoignage'])->name('temoignage');
 
 Route::get('/presentation', function () {
     return view('presentation');
 })->name('presentation.show');
 
+Route::get('/presentation', 'PresentationController@show')->name('presentation.show');
+
+Route::get('/adherer', function () {
+    return view('adherer');
+})->name('adherer');
 Route::get('/actions', function () {
     $actions = Action::orderBy('date', 'desc')->get();
     return view('actions', compact('actions'));
 })->name('actions');
 
-Route::get('/action/{id}', function(string $id){
+Route::get('/action/{id}', function (string $id) {
     $action = Action::find($id);
-    return view('action', compact( 'action' ) );
+    return view('action', compact('action'));
 })->name('action');

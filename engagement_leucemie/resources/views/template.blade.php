@@ -86,7 +86,7 @@
           <div class="col-12 col-md-4 col-lg-3 col-xl-2">
             <div class="widget">
               <a href="#!">
-                <img src="img/logo.png" alt="Logo Engagement Leucémie" width="200" height="190">
+                <img src="{{ url('img/logo.png') }}" alt="Logo Engagement Leucémie" width="200" height="190">
               </a>
             </div>
           </div>
