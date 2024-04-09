@@ -45,11 +45,10 @@ Route::get('/presentation', function () {
     return view('presentation');
 })->name('presentation.show');
 
-Route::get('/presentation', 'PresentationController@show')->name('presentation.show');
-
 Route::get('/adherer', function () {
     return view('adherer');
 })->name('adherer');
+
 Route::get('/actions', function () {
     $actions = Action::orderBy('date', 'desc')->get();
     return view('actions', compact('actions'));
