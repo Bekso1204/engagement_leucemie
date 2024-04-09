@@ -7,8 +7,20 @@
 <h1>Pourquoi une limite d'âge ?</h1>
 
 <!-- Titre Pourquoi une limite d'âge 18 - 35 ans -->
-<!-- Titre texte -->
+<div class="">
+
+    <p>
+
+        L'âge de recrutement pour s'inscrire sur le registre DVMO en France a été modifié le 1er janvier 2021 (18 à moins de 36 ans au lieu de 18 à 51 ans).
+    </p>
+</div>
+
 <!-- Vidéo -->
+<div class="videos">
+<iframe
+src="https://www.youtube.com/embed/tgbNymZ7vqY">
+</iframe>
+</div>
 <!-- Tableau -->
 <table class="table">
     <thead class="thead-dark">
@@ -139,9 +151,74 @@
   </tbody>
 </table>
 <!-- Titre Quel est l'argumentaire -->
-<!-- Paragraphe 1 -->
-<!-- Paragraphe 2 -->
-<!-- Paragraphe 3 -->
-
+<h1>Quel est l'argumentaire développé par <u>l'Agence de Biomédecine ?</u></h1>
+<!-- Titre Paragraphe -->
+<div class="Argumentaires"> 01
+Pourquoi l’âge limite d’inscription sur le registre des donneurs volontaires de moelle osseuse est passé de 50 ans à 35 ans révolus ?
 </div>
+
+<!-- Titre Paragraphe -->
+<div class="Argumentaires"> 02
+Lors de la recherche d’un donneur de moelle osseuse pour un malade, le premier critère est la parfaite compatibilité HLA entre le donneur et le receveur. L’âge du donneur prévaut-il sur cette compatibilité ?
+</div>
+
+<!-- Titre Paragraphe -->
+<div class="Argumentaires"> 03
+Alors que depuis des années l'on dit que la compatibilité est extrêmement rare, pourquoi ne pas inscrire aussi les plus de 35 ans pour offrir plus de chances de greffes ?
+</div>
+
+<!-- Mettre les titres en vert foncé -->
+</div>
+
+<div class="cards">
+<div class="card">
+
+    <div class="body">
+      <div class="numargum"> 01
+      </div>
+      <p class="argtext">
+        <li class="argtext">  Plus de 70 % des donneurs prélevés ont moins de 35 ans. </li>
+
+        <li class="argtext">  Les moins de 35 ans, et idéalement les hommes, présentent un meilleur profil de donneurs (car les greffons de moelle osseuse sont plus riches en cellules souches et permettent donc aux patients une prise de greffe plus rapide).</li>
+
+        <li class="argtext">  Un donneur est contacté en médiane 8 ans après son inscription. Sachant qu'un donneur peut être prélevé jusqu'à ses 60 ans révolus, plus un donneur s'inscrit jeune, plus il reste longtemps sur le registre et plus il a de chance d'être sollicité. </li>
+      </p>
+       <div class="footercard">
+
+     </div>
+  </div></div>
+
+  <div class="card">
+
+    <div class="body">
+      <div class="numargum">02
+      </div>
+      <p class="argtext">
+
+        Non. La compatibilité HLA reste le premier et principal critère dans le choix du donneur. Et c'est pour cette raison qu'il est important également d'inscrire des jeunes donneurs qui apportent une diversité génétique au registre français. Cependant, l’âge puis le sexe sont également des critères importants dans le choix du donneur, lorsqu’un choix est possible entre plusieurs profils.</p>
+       <div class="footercard">
+
+     </div>
+  </div></div>
+
+  <div class="card">
+
+    <div class="body">
+      <div class="numargum"> 03
+      </div>
+      <p class="argtext">
+        La probabilité moyenne d’identifier un donneur de moelle osseuse compatible en situation non apparentée varie énormément selon la fréquence des typage HLA (Human Leucocyte Antigen) des patients pour lesquelles une indication de greffe a été posée. La probabilité d'identifier un donneur compatible est en général de une chance sur mille, pour ceux possèdant une histoire génétique plus complexe cela passe à une chance sur dix-millions.
+
+        Il est nécessaire qu’un donneur présente exactement les mêmes caractéristiques HLA qu’un patient existant dans les registres. Cette diversité peut cependant être trouvée au sein de populations jeunes.
+    </p>
+       <div class="footercard">
+
+
+
+  </div>
+     </div>
+  </div></div>
+</div>
+
+
 @endsection
