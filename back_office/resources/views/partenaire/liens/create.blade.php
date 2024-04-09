@@ -4,13 +4,13 @@
 <form action="{{ route('lien.store') }}" method="post">
     @csrf
     <div class="liens">
-        <select id="type_liens" name="type_liens">
+        <select id="type_liens" name="type_liens" required>
             <option value="">Choisissez un type de lien</option>
             @foreach ($typeLiens as $type)
             <option value="{{ $type }}">{{ $type }}</option>
             @endforeach
         </select>
-        <input type="url" name="libelle_lien" id="libelle_lien">
+        <input type="url" name="libelle_lien" id="libelle_lien" required>
     </div>
     <br>
     <br>

@@ -5,13 +5,13 @@
     @csrf
     @method("PUT")
     <div class="liens">
-        <select id="type_liens" name="type_liens">
+        <select id="type_liens" name="type_liens" required>
             <option value="">Choisissez un type de lien</option>
             @foreach ($typeLiens as $type)
             <option value="{{ $type }}">{{ $type }}</option>
             @endforeach
         </select>
-        <input type="url" name="libelle_lien" id="libelle_lien" value="{{$lien->libelle}}">
+        <input type="url" name="libelle_lien" id="libelle_lien" value="{{$lien->libelle}}" required>
     </div>
     <br>
     <br>

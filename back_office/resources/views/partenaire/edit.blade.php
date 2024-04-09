@@ -5,10 +5,10 @@
     @csrf
     @method("PUT")
     <input type="text" class="form-control" name="nom_partenaire" id="nom_partenaire" placeholder="Nom du partenaire"  
-    value="{{$partenaire->nom}}" />
+    value="{{$partenaire->nom}}" required />
     </br>
     </br>
-    <input type="file" class="form-control" id="logo_partenaire" name="logo_partenaire">
+    <input type="file" class="form-control" id="logo_partenaire" name="logo_partenaire" required>
     </br>
     </br>
 

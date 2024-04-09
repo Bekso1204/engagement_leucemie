@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ActionController;
+use App\Http\Controllers\ActualiteController;
 use App\Http\Controllers\LienController;
 use App\Http\Controllers\PartenaireController;
 use App\Http\Controllers\TemoignageController;
@@ -41,6 +42,9 @@ Route::middleware('auth')->group(function () {
 
     // Route pour les pages de gestion des temoignages
     Route::resource('/temoignage', TemoignageController::class);
+
+    // Route pour les pages de gestion des actualités
+    Route::resource('/actualite', ActualiteController::class);
 
     // Route pour les pages de gestion des actions
     Route::resource('/action', ActionController::class);
