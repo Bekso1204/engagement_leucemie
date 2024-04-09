@@ -32,7 +32,9 @@ class PartenaireController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'logo' => 'image|max:2000',
+            'logo_partenaire' => 'required|image|max:2000',
+            'nom_partenaire' => 'required',
+            'lien_partenaire' => 'required',
         ]);
 
         //dd($request);
@@ -81,7 +83,8 @@ class PartenaireController extends Controller
     public function update(Request $request, string $id)
     {
         $validated = $request->validate([
-            'logo' => 'image|max:2000',
+            'logo_partenaire' => 'required|image|max:2000',
+            'nom_partenaire' => 'required',
         ]);
 
         $partenaire = Partenaire::find($id);
