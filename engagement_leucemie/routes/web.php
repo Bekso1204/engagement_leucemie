@@ -27,8 +27,13 @@ Route::get('/partenaires', function () {
 })->name('partenaires');
 
 Route::get('temoignages', [TemoignageController::class, 'show'])->name('temoignages');
+Route::get('temoignage/{id}', [TemoignageController::class, 'temoignage'])->name('temoignage');
 
 Route::get('/contact', 'ContactController@showForm')->name('contact.form');
 Route::post('/contact', 'ContactController@submitForm')->name('contact.submit');
 
 Route::get('/presentation', 'PresentationController@show')->name('presentation.show');
+
+Route::get('/adherer', function () {
+    return view('adherer');
+})->name('adherer');

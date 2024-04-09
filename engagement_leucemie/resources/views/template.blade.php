@@ -14,7 +14,7 @@
     <nav class="navbar bg-light navbar1">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-            <img src="img/logo_engagement_leucemie.png" alt="Logo" width="40" height="40" class="d-inline-block align-text-top">
+            <img src="{{ url('img/logo_engagement_leucemie.png') }}" alt="Logo" width="40" height="40" class="d-inline-block align-text-top">
             </a>
             <div class="contact">
                 <i class="fa-solid fa-location-dot"></i>    56 Chemin des Montarmots, 25000 BESANCON | <i class="fa-solid fa-envelope"></i>   engagementleucemie@gmail.com
@@ -30,7 +30,7 @@
     <nav class="navbar navbar-expand-lg navbar2">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="img/engagement_leucemie.png" alt="Logo" width="80" height="35" class="d-inline-block align-text-top">
+                <img src="{{ url('img/engagement_leucemie.png') }}" alt="Logo" width="80" height="35" class="d-inline-block align-text-top">
             </a>
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
@@ -54,7 +54,7 @@
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="">Présentation</a></li>
                   <li><a class="dropdown-item" href="{{route('partenaires')}}">Partenaires</a></li>
-                  <li><a class="dropdown-item" href="">Adhérer</a></li>
+                  <li><a class="dropdown-item" href="{{route('adherer')}}">Adhérer</a></li>
                 </ul>
               </li>
               <li class="nav-item">
@@ -80,7 +80,7 @@
           <div class="col-12 col-md-4 col-lg-3 col-xl-2">
             <div class="widget">
               <a href="#!">
-                <img src="img/logo.png" alt="Logo Engagement Leucémie" width="200" height="190">
+                <img src="{{ url('img/logo.png') }}" alt="Logo Engagement Leucémie" width="200" height="190">
               </a>
             </div>
           </div>
