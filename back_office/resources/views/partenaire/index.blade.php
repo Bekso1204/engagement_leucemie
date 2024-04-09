@@ -1,7 +1,7 @@
 @extends('template')
 @section('content')
 <h1>Partenaires</h1>
-    <a href="{{ route('partenaire.create')}}" class="btn btn-primary">Ajouter un nouveau partenaire</a>
+<a href="{{ route('partenaire.create')}}" class="btn btn-primary">Ajouter un nouveau partenaire</a>
 
 <div class="table-responsive">
     <table class="table table-bordered table-hover table-sm" id="myTable">
@@ -25,9 +25,12 @@
                 @foreach($partenaires as $partenaire)
             <tr>
                 <td>{{ $partenaire['nom'] }} </td>
-                <td>{{ $partenaire['logo'] }} </td>
                 <td>
-                <i class="{{ convertToIcon('tiktok') }}"></i>
+                    <img src="storage/{{ $partenaire['logo'] }}" alt="{{ $partenaire['nom'] }}" 
+                    height="25%" width="25%"/>
+                </td>
+                <td>
+                    <a href="{{ route('lien.show', [$partenaire['id']])}}" class="btn btn-primary">Voir liens</a>
                 </td>
                 <td>
                     <a href="{{ route('partenaire.edit', [$partenaire['id']])}}" class="btn btn-primary">Modifier</a>
