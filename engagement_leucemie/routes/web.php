@@ -23,7 +23,7 @@ use App\Models\Temoignage;
 
 Route::get('/', function () {
     return view('accueil');
-});
+})->name('accueil');
 
 Route::get('/template', function () {
     return view('template');
