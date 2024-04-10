@@ -72,12 +72,14 @@
         }
         .president-section h2{
             margin-top : 2rem;
+            text-align: center;
         }
         .president-content {
             display: flex; /* Utiliser flexbox */
             align-items: center;
             text-align: left;    /* Aligner les éléments verticalement */
             width: 70%;
+            margin: auto;
         }
         .president-content img{
             margin-right: 20px;
