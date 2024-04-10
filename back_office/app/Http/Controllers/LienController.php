@@ -34,6 +34,11 @@ class LienController extends Controller
      */
     public function store(Request $request)
     {
+        $validated = $request->validate([
+            'libelle_lien' => 'required',
+            'type_liens' => 'required',
+        ]);
+
         $partenaire_id = Session::get('partenaire_id');
         $nv_lien = new Lien();
         $nv_lien->libelle = $request->input('libelle_lien');
@@ -69,6 +74,11 @@ class LienController extends Controller
      */
     public function update(Request $request, string $id)
     {
+        $validated = $request->validate([
+            'libelle_lien' => 'required',
+            'type_liens' => 'required',
+        ]);
+        
         $lien = Lien::FindOrFail( $id );
         $lien->libelle = $request->input('libelle_lien');
         $lien->type = $request->input('type_liens');
