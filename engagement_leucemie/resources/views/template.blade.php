@@ -60,7 +60,7 @@
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="{{route('presentation.show')}}">Présentation</a></li>
               <li><a class="dropdown-item" href="{{route('partenaires')}}">Partenaires</a></li>
-              <li><a class="dropdown-item" href="">Adhérer</a></li>
+              <li><a class="dropdown-item" href="{{route('adherer')}}">Adhérer</a></li>
             </ul>
           </li>
           <li class="nav-item">
@@ -86,7 +86,7 @@
           <div class="col-12 col-md-4 col-lg-3 col-xl-2">
             <div class="widget">
               <a href="#!">
-                <img src="img/logo.png" alt="Logo Engagement Leucémie" width="200" height="190">
+                <img src="{{ url('img/logo.png') }}" alt="Logo Engagement Leucémie" width="200" height="190">
               </a>
             </div>
           </div>

@@ -1,5 +1,6 @@
 @extends('template')
 @section('content')
+<h1>Témoignages</h1>
 
 <a href="{{ route('temoignage.create') }}">
 <button type="button" class="btn btn-success">Ajouter</button>
