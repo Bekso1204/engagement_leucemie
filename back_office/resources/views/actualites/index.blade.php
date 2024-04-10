@@ -4,23 +4,7 @@
 <a href="{{ route('actualite.create')}}" class="btn btn-primary">Ajouter une nouvelle actualité</a>
 
 <div class="table-responsive">
-    <table class="table table-bordered table-hover table-sm" id="myTable">
-        <thead>
-            <tr>
-                <th>
-                    Titre
-                </th>
-                <th>
-                    Date
-                </th>
-                <th>
-                    Contenu
-                </th>
-                <th>
-                    Image
-                </th>
-                <th>Voir</th>
-                <th>Modifier</th>
+    <table class="table table-bordered t
                 <th>Supprimer</th>
             </tr>
         </thead>

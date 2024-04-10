@@ -25,8 +25,12 @@ Route::get('/', function () {
     return view('accueil');
 })->name('accueil');
 
-Route::get('/template', function () {
-    return view('template');
+Route::get('/donquoi', function () {
+    return view('donquoi');
+});
+
+Route::get('/limiteage', function () {
+    return view('limiteage');
 });
 
 Route::get('/contact', function () {
