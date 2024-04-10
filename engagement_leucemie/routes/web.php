@@ -5,7 +5,7 @@ use App\Models\Lien;
 use App\Models\Partenaire;
 use Illuminate\Support\Facades\Route;
 use App\Http\ContactController;
-use App\Http\PresentationController;
+use App\Http\Controllers\PresentationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,6 +39,4 @@ Route::get('/partenaires', function () {
 Route::get('temoignages', [TemoignageController::class, 'show'])->name('temoignages');
 
 
-Route::get('/presentation', function () {
-    return view('presentation');
-})->name('presentation.show');
+Route::get('/presentation', [PresentationController::class, 'presentation'])->name('presentation');

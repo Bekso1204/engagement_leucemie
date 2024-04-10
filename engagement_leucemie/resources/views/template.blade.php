@@ -53,7 +53,7 @@
                   Association
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="{{route('presentation.show')}}">Présentation</a></li>
+                  <li><a class="dropdown-item" href="{{route('presentation')}}">Présentation</a></li>
                   <li><a class="dropdown-item" href="{{route('partenaires')}}">Partenaires</a></li>
                   <li><a class="dropdown-item" href="">Adhérer</a></li>
                 </ul>

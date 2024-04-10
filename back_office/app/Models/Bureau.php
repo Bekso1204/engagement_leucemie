@@ -10,7 +10,10 @@ class Bureau extends Model
 {
     use HasFactory;
 
-    public function fonction():BelongsToMany{
-        return $this->belongsToMany(Fonction::class);
+    protected $table = 'bureaux';
+
+    public function fonctions():BelongsToMany
+    {
+        return $this->belongsToMany(Fonction::class, 'bureau_fonction');
     }
 }

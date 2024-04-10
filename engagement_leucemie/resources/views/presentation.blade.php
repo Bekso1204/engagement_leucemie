@@ -27,59 +27,19 @@
 <!-- Les membres du bureau et du conseil d’administration -->
 <h2 class="titre-membre">Les membres du Bureau et du Conseil d'Administration</h2>
 <section class="team">
-        <div class="member">
-            <img src="https://static.wixstatic.com/media/5f4624_1b4486182a14452584222884d28c7b1d~mv2.png/v1/fill/w_188,h_188,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/1.png" alt="Photo de membre 1">
-            <h3>Alexandre Chouffe</h3>
-            <p>Président</p>
-        </div>
-        <div class="member">
-            <img src="https://static.wixstatic.com/media/5f4624_db14f668a920487c8f109874a6c885e1~mv2.png/v1/fill/w_188,h_188,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/2.png" alt="Photo de membre 2">
-            <h3>Christophe Will</h3>
-            <p>Vice-président & trésorier</p>
-        </div>
-        <div class="member">
-            <img src="https://static.wixstatic.com/media/5f4624_e0a52194178845449affd9df8e2fbc72~mv2.png/v1/fill/w_188,h_188,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/3.png" alt="Photo de membre 1">
-            <h3>Thierry Dornier</h3>
-            <p>Vice-Président</p>
-        </div>
-        <div class="member">
-            <img src="https://static.wixstatic.com/media/5f4624_353b11c344ea4a75bd6c5b275415e48c~mv2.png/v1/fill/w_188,h_188,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/4.png" alt="Photo de membre 1">
-            <h3>Brice Alfonseda</h3>
-            <p>Secrétaire</p>
-        </div>
-        <div class="member">
-            <img src="https://static.wixstatic.com/media/5f4624_688cef6296d0436b98a109eb090bda74~mv2.png/v1/fill/w_188,h_188,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/5.png alt="Photo de membre 1">
-            <h3>Laura Verazzi</h3>
-            <p>Secrétaire adjointe</p>
-        </div>
-        <!-- Répéter jusqu'à 5 membres -->
-    </section>
-    <section class="team">
-        <!-- Répéter ceci pour les 4 membres suivants -->
-        <div class="member">
-            <img src="https://static.wixstatic.com/media/5f4624_ae708f70b37b40559d695a1b2c462d4f~mv2.png/v1/fill/w_188,h_188,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/8.png" alt="Photo de membre 1">
-            <h3>Marie-Thérèse Humblot</h3>
-            <p>Membre du CA</p>
-        </div>
-        <div class="member">
-            <img src="https://static.wixstatic.com/media/5f4624_be2c39ef54db4508aacb7b841d3298a7~mv2.png/v1/fill/w_188,h_188,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/6.png" alt="Photo de membre 1">
-            <h3>Laurent Chauvin</h3>
-            <p>Membre du CA <br>
-            Responsable partenariats </p>
-        </div>
-        <div class="member">
-            <img src="https://static.wixstatic.com/media/5f4624_f6c0df3bd6c249759c3716e7995f33a8~mv2.png/v1/fill/w_188,h_188,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/9.png" alt="Photo de membre 1">
-            <h3>Heddi Habdelli</h3>
-            <p>Membre du CA<br>
-            Responsable réseaux sociaux</p>
-        </div>
-        <div class="member">
-            <img src="https://static.wixstatic.com/media/5f4624_bff58db10efd4d189f26bd49492219f5~mv2.png/v1/fill/w_188,h_188,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/7.png" alt="Photo de membre 1">
-            <h3>Sylvain Guillaume</h3>
-            <p>Membre du CA<br>
-            Responsable Transjurasienne</p>
-        </div>
-    </section>
+@foreach ($bureaux as $bureau)
+    <div class="member">
+    <img src="../../../back_office/public/storage/{{$bureau->photo}}" alt="Photo de membre">
+        <h3>{{ $bureau->nom }} {{ $bureau->prenom }}</h3>
+        <p>Fonction :
+            @foreach ($bureau->fonction as $fonction)
+                {{ $fonction->libelle }}
+            @endforeach
+        </p>
+    </div>
+@endforeach
+</section>
+
 
 <!-- En dessous -->
 <section class="link">
