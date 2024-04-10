@@ -17,7 +17,7 @@
   <nav class="navbar bg-light navbar1">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
-        <img src="img/logo_engagement_leucemie.png" alt="Logo" width="40" height="40" class="d-inline-block align-text-top">
+        <img src="{{ url('img/logo_engagement_leucemie.png') }}" alt="Logo" width="40" height="40" class="d-inline-block align-text-top">
       </a>
       <div class="contact">
         <i class="fa-solid fa-location-dot"></i> 56 Chemin des Montarmots, 25000 BESANCON | <i class="fa-solid fa-envelope"></i> engagementleucemie@gmail.com
@@ -33,12 +33,12 @@
   <nav class="navbar navbar-expand-lg navbar2">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
-        <img src="img/engagement_leucemie.png" alt="Logo" width="80" height="35" class="d-inline-block align-text-top">
+        <img src="{{ url('img/engagement_leucemie.png') }}" alt="Logo" width="80" height="35" class="d-inline-block align-text-top">
       </a>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="">Accueil</a>
+            <a class="nav-link active" aria-current="page" href="{{route('accueil')}}">Accueil</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{route('actions')}}">Actions</a>
@@ -64,7 +64,7 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">Actualités</a>
+            <a class="nav-link" href="{{route('actualites')}}">Actualités</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{route('contact.show')}}">Contact</a>
