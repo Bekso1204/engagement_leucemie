@@ -22,8 +22,7 @@ src="https://www.youtube.com/embed/tgbNymZ7vqY">
 </iframe>
 </div>
 <!-- Tableau -->
-
-<table class="table table-bordered custom-table">
+<table class="table table-bordered">
     <thead>
     <tr>
       <th scope="col">Groupes</th>
@@ -151,6 +150,7 @@ src="https://www.youtube.com/embed/tgbNymZ7vqY">
 
   </tbody>
 </table>
+
 <!-- Titre Quel est l'argumentaire -->
 <h1>Quel est l'argumentaire développé par <u>l'Agence de Biomédecine ?</u></h1>
 <!-- Titre Paragraphe -->

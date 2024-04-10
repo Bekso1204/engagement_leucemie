@@ -354,10 +354,6 @@ iframe{
     font-weight: 200;
 }
 
-.custom-table {
-    width: 100%;
-}
-
 /*********** LIMITE AGE ***********/
 /*********** PAGE PARTENAIRES ***********/
 .page-partenaires{
@@ -599,7 +595,7 @@ iframe{
     width: 50%;
     border-radius: 10px;
     margin-top: 1.5rem;
-    
+
 }
 .page-adherer .description{
     padding: 1rem;
@@ -623,7 +619,7 @@ iframe{
     overflow: hidden;
     border: solid 2px rgb(243, 243, 243);
   }
-  
+
   .form_main::before {
     position: absolute;
     content: "";
@@ -637,7 +633,7 @@ iframe{
     border-radius: 30px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.082);
   }
-  
+
   .heading {
     font-size: 2em;
     color: #2e2e2e;
@@ -645,7 +641,7 @@ iframe{
     margin: 5px 0 10px 0;
     z-index: 2;
   }
-  
+
   .inputContainer {
     width: 100%;
     position: relative;
@@ -654,7 +650,7 @@ iframe{
     justify-content: center;
     z-index: 2;
   }
-  
+
   .inputIcon {
     position: absolute;
     left: 3px;
@@ -700,7 +696,7 @@ iframe{
   #button:hover {
     background-color: var(--accent);
   }
-  
+
   .forgotLink {
     z-index: 2;
     font-size: .7em;
