@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\ContactController;
 use App\Http\PresentationController;
 use App\Models\Action;
+use App\Models\Actualite;
 use App\Models\Temoignage;
 
 /*
@@ -21,7 +22,7 @@ use App\Models\Temoignage;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('accueil');
 });
 
 Route::get('/template', function () {
@@ -53,3 +54,13 @@ Route::get('/action/{id}', function(string $id){
     $action = Action::find($id);
     return view('action', compact( 'action' ) );
 })->name('action');
+
+Route::get('/actualites', function(){
+    $actus = Actualite::orderBy('date', 'desc')->get();
+    return view("actualites", compact( "actus" ) );
+})->name('actualites');
+
+Route::get('/actualite/{id}', function(string $id) {
+    $actu = Actualite::find($id);
+    return view('actualite', compact('actu'));
+})->name('actualite');

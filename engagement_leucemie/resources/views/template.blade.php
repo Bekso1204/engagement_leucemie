@@ -64,7 +64,7 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">Actualités</a>
+            <a class="nav-link" href="{{route('actualites')}}">Actualités</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{route('contact.show')}}">Contact</a>
