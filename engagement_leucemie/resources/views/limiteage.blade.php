@@ -22,8 +22,9 @@ src="https://www.youtube.com/embed/tgbNymZ7vqY">
 </iframe>
 </div>
 <!-- Tableau -->
-<table class="table">
-    <thead class="thead-dark">
+
+<table class="table table-bordered custom-table">
+    <thead>
     <tr>
       <th scope="col">Groupes</th>
       <th scope="col">Limites d'âge</th>
