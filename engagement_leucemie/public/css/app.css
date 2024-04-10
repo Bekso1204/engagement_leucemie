@@ -232,3 +232,23 @@ h1{
 .temoignages-header p{
     font-size: 1.2rem;
 }
+
+textarea {
+    width: 100%;
+    min-height: 50vh;
+    border: none;
+    resize: none;
+    font-family: 'Poppins';
+    outline: none;
+    background-color: #f4f4f4;
+    overflow: hidden;
+}
+
+.img_secondaire {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.img_secondaire img{
+    margin: 10px;
+}

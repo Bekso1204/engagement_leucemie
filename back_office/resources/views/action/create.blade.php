@@ -29,7 +29,7 @@
         <input type="number" class="form-control" id="nb_sensibilises" name="nb_sensibilises" placeholder="Nombre de sensibilisés" value="{{old('nb_sensibilises')}}" required>
     </div>
     <div class="mb-3">
-        <input type="checkbox" id="is_private" name="is_private" placeholder="Est privé" value="{{old('is_private')}}" required>
+        <input type="checkbox" id="is_private" name="is_private" placeholder="Est privé" value="{{old('is_private')}}">
         <label for="private">Est privé</label>
     </div>
 
