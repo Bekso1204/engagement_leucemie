@@ -11,7 +11,13 @@
             <option value="{{ $type }}">{{ $type }}</option>
             @endforeach
         </select>
+        @error('type_liens')
+    {{$message}}
+    @enderror
         <input type="url" name="libelle_lien" id="libelle_lien" value="{{$lien->libelle}}">
+        @error('libelle_lien')
+        {{$message}}
+        @enderror
     </div>
     <br>
     <br>
