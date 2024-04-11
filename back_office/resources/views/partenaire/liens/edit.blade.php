@@ -11,7 +11,7 @@
             <option value="{{ $type }}">{{ $type }}</option>
             @endforeach
         </select>
-        <input type="text" name="libelle_lien" id="libelle_lien" value="{{$lien->libelle}}">
+        <input type="url" name="libelle_lien" id="libelle_lien" value="{{$lien->libelle}}">
     </div>
     <br>
     <br>

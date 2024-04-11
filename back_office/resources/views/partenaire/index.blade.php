@@ -26,8 +26,9 @@
             <tr>
                 <td>{{ $partenaire['nom'] }} </td>
                 <td>
-                    <img src="storage/{{ $partenaire['logo'] }}" alt="{{ $partenaire['nom'] }}" 
-                    height="25%" width="25%"/>
+                    <div class="td-image">
+                        <img src="storage/{{ $partenaire['logo'] }}" alt="{{ $partenaire['nom'] }}"/>
+                    </div>
                 </td>
                 <td>
                     <a href="{{ route('lien.show', [$partenaire['id']])}}" class="btn btn-primary">Voir liens</a>

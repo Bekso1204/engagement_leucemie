@@ -4,7 +4,7 @@
 <form action="{{ route('partenaire.update', [$partenaire['id']]) }}" method="post" enctype="multipart/form-data">
     @csrf
     @method("PUT")
-    <input type="text" name="nom_partenaire" id="nom_partenaire" placeholder="Nom du partenaire"  
+    <input type="text" class="form-control" name="nom_partenaire" id="nom_partenaire" placeholder="Nom du partenaire"  
     value="{{$partenaire->nom}}" />
     </br>
     </br>

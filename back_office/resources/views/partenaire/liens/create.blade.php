@@ -10,7 +10,7 @@
             <option value="{{ $type }}">{{ $type }}</option>
             @endforeach
         </select>
-        <input type="text" name="libelle_lien" id="libelle_lien">
+        <input type="url" name="libelle_lien" id="libelle_lien">
     </div>
     <br>
     <br>
