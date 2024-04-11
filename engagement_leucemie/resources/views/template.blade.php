@@ -17,7 +17,7 @@
   <nav class="navbar bg-light navbar1">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
-        <img src="img/logo_engagement_leucemie.png" alt="Logo" width="40" height="40" class="d-inline-block align-text-top">
+        <img src="{{asset('img/logo_engagement_leucemie.png')}}" alt="Logo" width="40" height="40" class="d-inline-block align-text-top">
       </a>
       <div class="contact">
         <i class="fa-solid fa-location-dot"></i> 56 Chemin des Montarmots, 25000 BESANCON | <i class="fa-solid fa-envelope"></i> engagementleucemie@gmail.com
@@ -33,7 +33,7 @@
   <nav class="navbar navbar-expand-lg navbar2">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
-        <img src="img/engagement_leucemie.png" alt="Logo" width="80" height="35" class="d-inline-block align-text-top">
+        <img src="{{asset('img/engagement_leucemie.png')}}" alt="Logo" width="80" height="35" class="d-inline-block align-text-top">
       </a>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
