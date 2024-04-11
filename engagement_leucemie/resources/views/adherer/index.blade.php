@@ -25,21 +25,22 @@
             </div>
             <div class="texte-engagement">Merci pour votre engagement à nos côtés.</div>
         </div>
-        <form action="" class="form_main">
+        <form method="POST" action="{{ route('adherer.store')}}" class="form_main">
+            @csrf
             <p class="heading">Rejoignez-nous</p>
             <h4>paiement par chèque à :
                 Engagement Leucémie <br>
                 56, Chemin des Montarmots
                 25000 BESANCON</h4>
             <div class="inputContainer">
-            <input type="text" class="inputField" id="username" placeholder="Nom">
+            <input type="text" class="inputField" id="nom" name="nom" placeholder="Nom">
             </div>
             
         <div class="inputContainer">
-            <input type="text" class="inputField" id="password" placeholder="Prénom">
+            <input type="text" class="inputField" id="prenom" name="prenom" placeholder="Prénom">
         </div>
         <div class="inputContainer">
-            <input type="text" class="inputField" id="password" placeholder="Email">
+            <input type="text" class="inputField" id="password" name="email" placeholder="Email">
         </div>
                    
         <button id="button">Valider</button>

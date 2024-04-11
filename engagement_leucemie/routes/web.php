@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdhererController;
 use App\Http\Controllers\TemoignageController;
 use App\Models\Lien;
 use App\Models\Partenaire;
@@ -38,6 +39,5 @@ Route::post('/contact', 'ContactController@submitForm')->name('contact.submit');
 
 Route::get('/presentation', 'PresentationController@show')->name('presentation.show');
 
-Route::get('/adherer', function () {
-    return view('adherer');
-})->name('adherer');
+// Route pour les pages adherer
+Route::resource('/adherer', AdhererController::class);

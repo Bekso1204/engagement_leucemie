@@ -55,7 +55,7 @@
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="">Présentation</a></li>
                   <li><a class="dropdown-item" href="{{route('partenaires')}}">Partenaires</a></li>
-                  <li><a class="dropdown-item" href="{{route('adherer')}}">Adhérer</a></li>
+                  <li><a class="dropdown-item" href="{{route('adherer.index')}}">Adhérer</a></li>
                 </ul>
               </li>
               <li class="nav-item">
