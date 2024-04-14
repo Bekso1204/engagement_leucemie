@@ -31,34 +31,52 @@ class ActionController extends Controller
      */
     public function store(Request $request)
     {
-        $action = new Action();
-        $action->titre = $request->titre;
-        $action->date = $request->date;
-        $action->heure = $request->heure;
-        $action->adresse = $request->adresse;
-        $action->code_postal = $request->code_postal;
-        $action->ville = $request->ville;
-        $action->nb_inscrits = $request->nb_inscrits;
-        $action->nb_sensibilises = $request->nb_sensibilises;
-        $action->is_private = $request->has('is_private') ? true : false;
+        try {
+            $request->validate([
+                'titre' => 'required|string|max:255',
+                'date' => 'required|date|after_or_equal:today',
+                'heure' => 'required|date_format:H:i',
+                'adresse' => 'required|string|max:255',
+                'code_postal' => 'required|integer',
+                'ville' => 'required|string|max:255',
+                'nb_inscrits' => 'required|integer',
+                'nb_sensibilises' => 'required|integer',
+                'photo' => 'required|file|mimes:jpeg,png,jpg,gif,svg|max:2048',
+                'titre_photo' => 'required|string|max:255',
+                'legende_photo' => 'required|string|max:255',
+            ]);
 
-        $action->save();
+            $action = new Action();
+            $action->titre = $request->titre;
+            $action->date = $request->date;
+            $action->heure = $request->heure;
+            $action->adresse = $request->adresse;
+            $action->code_postal = $request->code_postal;
+            $action->ville = $request->ville;
+            $action->nb_inscrits = $request->nb_inscrits;
+            $action->nb_sensibilises = $request->nb_sensibilises;
+            $action->is_private = $request->has('is_private') ? true : false;
 
-        $photo = new  Photo();
-        $photo->titre = $request->titre_photo;
-        $photo->legende = $request->legende_photo;
+            $action->save();
 
-        /** @var UploadImage $logo */
-        $logo = $request->file('photo');
-        $logoPath = $logo->store('photos_actions', 'public');
-        $photo->photo = $logoPath;
+            $photo = new  Photo();
+            $photo->titre = $request->titre_photo;
+            $photo->legende = $request->legende_photo;
 
-        $photo->action_id = $action->id;
-        $photo->is_main = true;
+            /** @var UploadImage $logo */
+            $logo = $request->file('photo');
+            $logoPath = $logo->store('photos_actions', 'public');
+            $photo->photo = $logoPath;
 
-        $photo->save();
+            $photo->action_id = $action->id;
+            $photo->is_main = true;
 
-        return redirect()->route('action.index')->with('success', 'L\'action a été créée');
+            $photo->save();
+
+            return redirect()->route('action.index')->with('success', 'L\'action a été créée');
+        } catch (\Exception $e) {
+            return redirect()->route('action.index')->with('error', 'Une erreur est survenue lors de la création de l\'action');
+        }
     }
 
     /**
@@ -84,19 +102,35 @@ class ActionController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $action = Action::find($id);
-        $action->titre = $request->titre;
-        $action->date = $request->date;
-        $action->heure = $request->heure;
-        $action->adresse = $request->adresse;
-        $action->code_postal = $request->code_postal;
-        $action->ville = $request->ville;
-        $action->nb_inscrits = $request->nb_inscrits;
-        $action->nb_sensibilises = $request->nb_sensibilises;
-        $action->is_private = $request->has('is_private') ? true : false;
+        try {
+            $request->validate([
+                'titre' => 'required|string|max:255',
+                'date' => 'required|date|after_or_equal:today',
+                'heure' => 'required|date_format:H:i',
+                'adresse' => 'required|string|max:255',
+                'code_postal' => 'required|integer',
+                'ville' => 'required|string|max:255',
+                'nb_inscrits' => 'required|integer',
+                'nb_sensibilises' => 'required|integer',
+            ]);
 
-        $action->save();
-        return redirect()->route('action.index')->with('success', 'L\'action a été modifiée');
+            $action = Action::find($id);
+            $action->titre = $request->titre;
+            $action->date = $request->date;
+            $action->heure = $request->heure;
+            $action->adresse = $request->adresse;
+            $action->code_postal = $request->code_postal;
+            $action->ville = $request->ville;
+            $action->nb_inscrits = $request->nb_inscrits;
+            $action->nb_sensibilises = $request->nb_sensibilises;
+            $action->is_private = $request->has('is_private') ? true : false;
+
+            $action->save();
+            return redirect()->route('action.index')->with('success', 'L\'action a été modifiée');
+        } catch (\Exception $e) {
+
+            return redirect()->route('action.index')->with('error', 'Une erreur est survenue lors de la modification de l\'action');
+        }
     }
 
     /**
@@ -104,17 +138,21 @@ class ActionController extends Controller
      */
     public function destroy(string $id)
     {
-        $action = Action::find($id);
-        $photos = $action->photos()->get();
+        try {
+            $action = Action::find($id);
+            $photos = $action->photos()->get();
 
-        foreach ($photos as $photo) {
-            Storage::disk('public')->delete($photo->photo);
-            $photo->delete();
+            foreach ($photos as $photo) {
+                Storage::disk('public')->delete($photo->photo);
+                $photo->delete();
+            }
+
+            $action->delete();
+
+            return redirect()->route('action.index')->with('success', 'L\'action a été supprimée');
+        } catch (\Exception $e) {
+            return redirect()->route('action.index')->with('error', 'Une erreur est survenue lors de la suppression de l\'action');
         }
-
-        $action->delete();
-
-        return redirect()->route('action.index')->with('success', 'L\'action a été supprimée');
     }
 
     /**
@@ -131,22 +169,32 @@ class ActionController extends Controller
      */
     public function storePicture(Request $request, string $id)
     {
-        $action = Action::findOrFail($id);
-        $photo = new  Photo();
-        $photo->titre = $request->titre_photo;
-        $photo->legende = $request->legende_photo;
+        try {
+            $request->validate([
+                'titre_photo' => 'required|string|max:255',
+                'legende_photo' => 'required|string|max:255',
+                'photo' => 'required|file|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            ]);
 
-        /** @var UploadImage $logo */
-        $logo = $request->file('photo');
-        $logoPath = $logo->store('photos_actions', 'public');
-        $photo->photo = $logoPath;
+            $action = Action::findOrFail($id);
+            $photo = new  Photo();
+            $photo->titre = $request->titre_photo;
+            $photo->legende = $request->legende_photo;
 
-        $photo->action_id = $action->id;
-        $photo->is_main = false;
+            /** @var UploadImage $logo */
+            $logo = $request->file('photo');
+            $logoPath = $logo->store('photos_actions', 'public');
+            $photo->photo = $logoPath;
 
-        $photo->save();
+            $photo->action_id = $action->id;
+            $photo->is_main = false;
 
-        return redirect()->back()->with('success', 'Photo ajoutée à l\'action');
+            $photo->save();
+
+            return redirect()->back()->with('success', 'Photo ajoutée à l\'action');
+        } catch (\Exception $e) {
+            return redirect()->route('action.index')->with('error', 'Une erreur est survenue lors de la création de la photo');
+        }
     }
 
     /**
@@ -176,26 +224,36 @@ class ActionController extends Controller
      */
     public function updatePicture(Request $request, string $actionId, string $picId)
     {
-        $action = Action::findOrFail($actionId);
-        $photo = Photo::find($picId);
+        try {
+            $request->validate([
+                'titre_photo' => 'required|string|max:255',
+                'legende_photo' => 'required|string|max:255',
+                'photo' => 'required|file|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            ]);
 
-        $photo->titre = $request->input('titre_photo');
-        $photo->legende = $request->input('legende_photo');
+            $action = Action::findOrFail($actionId);
+            $photo = Photo::find($picId);
 
-        if ($photo->photo) {
-            Storage::disk('public')->delete($photo->photo);
+            $photo->titre = $request->input('titre_photo');
+            $photo->legende = $request->input('legende_photo');
+
+            if ($photo->photo) {
+                Storage::disk('public')->delete($photo->photo);
+            }
+
+            if ($request->file('photo')) {
+                /** @var UploadImage $logo */
+                $logo = $request->file('photo');
+                $logoPath = $logo->store('photos_actions', 'public');
+                $photo->photo = $logoPath;
+            }
+
+            $photo->save();
+
+            return redirect()->route('action.showPictures', ['action' => $action])->with('success', 'La photo a bien été modifiée !');
+        } catch (\Exception $e) {
+            return redirect()->route("action.showPictures", ['action' => $actionId])->with('error', 'Une erreur est survenue lors de la modification de la photo');
         }
-
-        if ($request->file('photo')) {
-            /** @var UploadImage $logo */
-            $logo = $request->file('photo');
-            $logoPath = $logo->store('photos_actions', 'public');
-            $photo->photo = $logoPath;
-        }
-
-        $photo->save();
-
-        return redirect()->route('action.showPictures', ['action' => $action])->with('success', 'La photo a bien été modifiée !');
     }
 
     /**
@@ -203,10 +261,14 @@ class ActionController extends Controller
      */
     public function destroyPicture(string $actionId, string $picId)
     {
-        $picture = Photo::find($picId);
-        Storage::disk('public')->delete($picture->photo);
-        $picture->delete();
+        try {
+            $picture = Photo::find($picId);
+            Storage::disk('public')->delete($picture->photo);
+            $picture->delete();
 
-        return redirect()->route("action.showPictures", ['action' => $actionId])->with('success', "La photo a bien été supprimé");
+            return redirect()->route("action.showPictures", ['action' => $actionId])->with('success', "La photo a bien été supprimé");
+        } catch (\Exception $e) {
+            return redirect()->route("action.showPictures", ['action' => $actionId])->with('error', 'Une erreur est survenue lors de la suppression de la photo');
+        }
     }
 }

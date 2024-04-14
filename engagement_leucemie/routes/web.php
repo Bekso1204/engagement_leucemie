@@ -27,11 +27,11 @@ Route::get('/', function () {
 
 Route::get('/donquoi', function () {
     return view('donquoi');
-});
+})->name('donquoi');
 
 Route::get('/limiteage', function () {
     return view('limiteage');
-});
+})->name('limiteage');
 
 Route::get('/contact', function () {
     return view('contact');

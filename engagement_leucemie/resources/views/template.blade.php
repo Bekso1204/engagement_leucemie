@@ -48,8 +48,8 @@
               Don de moelle osseuse
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="">Qu'est ce que c'est ?</a></li>
-              <li><a class="dropdown-item" href="">Pourquoi 18-35 ans ?</a></li>
+              <li><a class="dropdown-item" href="{{route('donquoi')}}">Qu'est ce que c'est ?</a></li>
+              <li><a class="dropdown-item" href="{{route('limiteage')}}">Pourquoi 18-35 ans ?</a></li>
               <li><a class="dropdown-item" href="{{route('temoignages')}}">Témoignages</a></li>
             </ul>
           </li>
