@@ -78,6 +78,11 @@
                     <span>Gestion du Bureau</span></a>
             </li>
             <hr class="sidebar-divider my-0">
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('adherant.index') }}">
+                    <i class="fa-solid fa-users"></i>
+                    <span>Les Adhérants</span></a>
+            </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
