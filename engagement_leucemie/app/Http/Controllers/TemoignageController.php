@@ -16,4 +16,14 @@ class TemoignageController extends Controller
             return back()->withErrors("Erreur avec la connexion à la base de données")->withInput();
         
     }
+    public function temoignage($id){
+        try{
+        $temoignage = Temoignage::find($id);
+        return view('temoignage',compact('temoignage'));
+        }
+        catch (\Exception $e) {
+            return back()->withErrors("Erreur avec la connexion à la base de données")->withInput();
+        }
+    }
+
 }

@@ -1,5 +1,6 @@
 @extends('template')
 @section('content')
+<h1>Témoignages</h1>
 
 <a href="{{ route('temoignage.create') }}">
 <button type="button" class="btn btn-success">Ajouter</button>
@@ -32,7 +33,7 @@
             $nbMots = implode(' ', array_slice($mots, 0, 5));
         @endphp
         <td>{{$nbMots}}...</td>
-        <td>{{$ligne->date}}</td>
+        <td>{{ date('d/m/Y', strtotime($ligne->date)) }}</td>
         <td class="actions">
             <form method="post" action="{{ route('temoignage.destroy',[$ligne->id])}}">
                 @csrf

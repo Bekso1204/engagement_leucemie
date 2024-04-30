@@ -45,13 +45,13 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="">
+                <a class="nav-link" href="{{ route('action.index') }}">
                     <i class="fas fa-flag"></i>
                     <span>Les Actions</span></a>
             </li>
             <hr class="sidebar-divider my-0">
             <li class="nav-item">
-                <a class="nav-link" href="">
+                <a class="nav-link" href="{{route('actualite.index')}}">
                     <i class="fa-solid fa-user-group"></i>
                     <span>Les Actualités</span></a>
             </li>

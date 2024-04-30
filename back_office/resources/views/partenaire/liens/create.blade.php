@@ -10,7 +10,13 @@
             <option value="{{ $type }}">{{ $type }}</option>
             @endforeach
         </select>
-        <input type="text" name="libelle_lien" id="libelle_lien">
+        @error('type_liens')
+        {{$message}}
+        @enderror
+        <input type="url" name="libelle_lien" id="libelle_lien">
+        @error('libelle_lien')
+        {{$message}}
+        @enderror
     </div>
     <br>
     <br>

@@ -1,10 +1,10 @@
 <?php
 
+use App\Http\Controllers\ActionController;
+use App\Http\Controllers\ActualiteController;
 use App\Http\Controllers\LienController;
 use App\Http\Controllers\PartenaireController;
 use App\Http\Controllers\TemoignageController;
-use App\Models\Partenaire;
-use App\Models\Temoignage;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BureauController;
@@ -36,9 +36,6 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    Route::get('/template', function () {
-        return view('template');
-    });
 
     // Route pour les pages de gestion des partenaires
     Route::resource('/partenaire', PartenaireController::class);
@@ -70,6 +67,17 @@ Route::middleware('auth')->group(function () {
     Route::get('/fonctions/{id}/edit', [FonctionController::class, 'edit'])->name('fonction.edit');
     Route::put('/fonctions/{id}', [FonctionController::class, 'update'])->name('fonction.update');
 
+    // Route pour les pages de gestion des actualités
+    Route::resource('/actualite', ActualiteController::class);
+
+    // Route pour les pages de gestion des actions
+    Route::resource('/action', ActionController::class);
+    Route::get('/action/addPicture/{id}', [ActionController::class, 'addPicture'])->name("action.addPicture");
+    Route::put('/action/storePicture/{id}', [ActionController::class, 'storePicture'])->name("action.storePicture");
+    Route::get('/action/showPictures/{action}', [ActionController::class, 'showPictures'])->name('action.showPictures');
+    Route::get('/action/{action}/editPicture/{id}', [ActionController::class, 'editPicture'])->name('action.editPicture');
+    Route::put('/action/{action}/updatePicture/{id}', [ActionController::class, 'updatePicture'])->name('action.updatePicture');
+    Route::delete('/action/{action}/destroyPicture/{id}', [ActionController::class, 'destroyPicture'])->name('action.destroyPicture');
 });
 
 require __DIR__ . '/auth.php';
