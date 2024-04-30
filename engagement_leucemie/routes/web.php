@@ -22,7 +22,20 @@ use App\Models\Temoignage;
 */
 
 Route::get('/', function () {
-    return view('accueil');
+    $actions = Action::where('date', '>=', now())
+        ->orderBy('date', 'asc')
+        ->take(2)
+        ->get();
+
+    $temoignages = Temoignage::orderBy('date', 'desc')
+        ->take(2)
+        ->get();
+
+    $actualites = Actualite::orderBy('date', 'desc')
+        ->take(2)
+        ->get();
+
+    return view('accueil', compact('actions', 'temoignages', 'actualites'));
 })->name('accueil');
 
 Route::get('/donquoi', function () {
@@ -61,15 +74,15 @@ Route::get('/actions', function () {
 
 Route::get('/action/{id}', function (string $id) {
     $action = Action::find($id);
-    return view('action', compact( 'action' ) );
+    return view('action', compact('action'));
 })->name('action');
 
-Route::get('/actualites', function(){
+Route::get('/actualites', function () {
     $actus = Actualite::orderBy('date', 'desc')->get();
-    return view("actualites", compact( "actus" ) );
+    return view("actualites", compact("actus"));
 })->name('actualites');
 
-Route::get('/actualite/{id}', function(string $id) {
+Route::get('/actualite/{id}', function (string $id) {
     $actu = Actualite::find($id);
     return view('actualite', compact('actu'));
 })->name('actualite');

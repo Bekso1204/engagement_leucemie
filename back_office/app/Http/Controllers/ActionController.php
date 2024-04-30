@@ -75,6 +75,7 @@ class ActionController extends Controller
 
             return redirect()->route('action.index')->with('success', 'L\'action a été créée');
         } catch (\Exception $e) {
+            
             return redirect()->route('action.index')->with('error', 'Une erreur est survenue lors de la création de l\'action');
         }
     }
