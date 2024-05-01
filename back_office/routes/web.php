@@ -7,6 +7,9 @@ use App\Http\Controllers\PartenaireController;
 use App\Http\Controllers\TemoignageController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BureauController;
+use App\Http\Controllers\FonctionController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -42,6 +45,27 @@ Route::middleware('auth')->group(function () {
 
     // Route pour les pages de gestion des temoignages
     Route::resource('/temoignage', TemoignageController::class);
+
+    // Route pour les pages de gestion du bureau
+    Route::resource('/bureau', BureauController::class);
+
+    // Route pour la gestion des fonctions
+    Route::resource('/fonction', FonctionController::class);
+
+    // Route pour afficher le formulaire de modification d'un bureau
+    Route::get('/bureau/{id}/edit', [BureauController::class, 'edit'])->name('bureau.edit');
+
+    // Route pour mettre à jour les informations d'un bureau
+    Route::put('/bureau/{id}', [BureauController::class, 'update'])->name('bureau.update');
+
+    // Route pour supprimer un bureau
+    Route::delete('/bureau/{id}', [BureauController::class, 'destroy'])->name('bureau.destroy');
+
+    Route::get('/fonctions', [FonctionController::class, 'index'])->name('fonction.index');
+
+    Route::delete('/fonctions/{id}', [FonctionController::class, 'destroy'])->name('fonction.destroy');
+    Route::get('/fonctions/{id}/edit', [FonctionController::class, 'edit'])->name('fonction.edit');
+    Route::put('/fonctions/{id}', [FonctionController::class, 'update'])->name('fonction.update');
 
     // Route pour les pages de gestion des actualités
     Route::resource('/actualite', ActualiteController::class);

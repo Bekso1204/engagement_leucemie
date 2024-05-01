@@ -11,6 +11,6 @@ class Fonction extends Model
     use HasFactory;
 
     public function bureau():BelongsToMany{
-        return $this->belongsToMany(Bureau::class);
+        return $this->belongsToMany(Bureau::class, 'bureau_fonction');
     }
 }
